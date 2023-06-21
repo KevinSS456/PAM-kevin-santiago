@@ -1,20 +1,51 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { KeyboardAvoidingView, StyleSheet, Text, TextInput, View,Image, TouchableOpacity } from 'react-native';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+  <KeyboardAvoidingView style={styles.background}> 
+    <View>
+      <Image
+        source={'./src/assets/logo.png'}
+      />
     </View>
-  );
+    
+    <View>
+      <TextInput
+        placeholder='Email'
+        autoCorrect={false}
+        onChangeText={()=>{}}
+      />
+    
+      <TextInput
+        placeholder='Senha'
+        autoCorrect={false}
+        onChangeText={()=>{}}
+      />
+
+      <TouchableOpacity>
+        <Text>Acessar</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity>
+        <Text>Criar conta gratuita</Text>
+      </TouchableOpacity>
+
+    </View>
+  </KeyboardAvoidingView>  
+    );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
+  background:{
+    flex:1,
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: '#191919'
   },
+  containerLogo: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  }
 });
