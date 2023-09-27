@@ -16,14 +16,14 @@ export default function Page() {
           <Image style={styles.img} source={require("../assets/pao.png")} />
 
           <Text style={styles.subtitle}>SEU HAMBÚRGUER SERÁ:</Text>
-
-          <Link style={styles.button} href='#'>
-            <Image source={require("../assets/opcaocarne.png")} />
-          </Link>
-          <Link href="#">
-              
-          </Link>
-         
+          <View  style={styles.dad}>
+            <Link href='#' style={styles.buttonFood}>
+            <Image   source={require("../assets/opcaocarne.png")} />
+            </Link>
+            <Link href="#"  style={styles.buttonFood2}>
+            <Image   source={require("../assets/opcapfrango.png")} />
+            </Link>
+          </View>
         </View>
       </ImageBackground>
     </View>
@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
      alignItems: 'center',
      width: "100%",
      height: "8%",
-     backgroundColor: "rgba(255, 92, 0, 0.8)",
+     backgroundColor: "rgba(255, 92, 0, 0.6)",
 
    },
 
@@ -73,7 +73,6 @@ const styles = StyleSheet.create({
      position: "absolute",
      bottom: 0,
      marginBottom: 20,
-     flex: 1,
      backgroundColor: "#FFF",
      borderRadius: 30,
      height: "85%",
@@ -84,7 +83,7 @@ const styles = StyleSheet.create({
    },
 
    img:{
-    marginTop: 100,
+    marginTop: 10,
     position: "fixed"
    },
    title:{
@@ -100,5 +99,26 @@ const styles = StyleSheet.create({
      marginTop: 20,
       fontWeight: 'bold',
       fontSize: 26,
-   }
+   },
+   dad:{
+    justifyContent: "space-between",
+    width: 320,
+    height: 100,
+    marginLeft: 25,
+    top: 0,
+    padding: 0
+   },
+   buttonFood:{
+     top: 0,
+     height: 300,
+     width:150
+   },
+   buttonFood2:{
+     top: 0,
+    position: "absolute",
+    height: 300,
+    width:150,
+    top: 0,
+    right: 0
+  }
 });
