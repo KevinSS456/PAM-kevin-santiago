@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View, ImageBackground, Image} from "react-native";
 import { Link } from "expo-router";
-import 'https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap'
+import { IrishGrover } from '@expo-google-fonts/irish-grover';
 
 
 export default function Page() {
@@ -8,17 +8,17 @@ export default function Page() {
     <View style={styles.container}>
       <ImageBackground source={require('../assets/Background.png')} style={styles.imageBackground}>
         <View  style={styles.navbar}>
-          <Text>Kevin & Ana's Burger</Text>
+          <Text style={styles.text_nav}>Kevin & Ana's Burger</Text>
         </View>
-        <View>
-          <Text>Monte Seu Lanche</Text>
+        <View style={styles.container_escolha}>
+          <Text style={styles.title}>MONTE SEU LANCHE</Text>
 
-          <Image source={require("../assets/pao.png")} />
+          <Image style={styles.img} source={require("../assets/pao.png")} />
 
-          <Text>Seu Hamburguer Será:</Text>
+          <Text style={styles.subtitle}>SEU HAMBÚRGUER SERÁ:</Text>
 
-          <Link href='#'>
-            
+          <Link style={styles.button} href='#'>
+            <Image source={require("../assets/opcaocarne.png")} />
           </Link>
           <Link href="#">
               
@@ -58,8 +58,47 @@ const styles = StyleSheet.create({
      alignItems: 'center',
      width: "100%",
      height: "8%",
-     backgroundColor: "#FF5C00",
-     fontSize: 50,
+     backgroundColor: "rgba(255, 92, 0, 0.8)",
 
    },
+
+   text_nav:{
+    fontSize: 25,
+    fontFamily: 'IrishGrover',
+   },
+
+
+   container_escolha:{
+    
+     position: "absolute",
+     bottom: 0,
+     marginBottom: 20,
+     flex: 1,
+     backgroundColor: "#FFF",
+     borderRadius: 30,
+     height: "85%",
+     width: "90%",
+     alignItems: "center",
+     justifyContent: "center",
+
+   },
+
+   img:{
+    marginTop: 100,
+    position: "fixed"
+   },
+   title:{
+     top: 0,
+     marginTop: 20,
+     position: "absolute",
+     fontSize: 27,
+     fontWeight: 'bold',
+     letterSpacing: 1,
+   },
+   subtitle: {
+     position: "relative",
+     marginTop: 20,
+      fontWeight: 'bold',
+      fontSize: 26,
+   }
 });
