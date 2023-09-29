@@ -22,7 +22,7 @@ export default function Page() {
             <Text>SIM, CONFIRME</Text>
 
             </Link>
-            <Link href="/index"  style={styles.buttoncfm2}>
+            <Link href= '/'  style={styles.buttoncfm2}>
             <Text>NÃO, QUERO REINICIAR</Text>
             </Link>
           </View>
@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
 
    text_nav:{
     fontSize: 25,
-    fontFamily: 'IrishGrover',
+
    },
 
 

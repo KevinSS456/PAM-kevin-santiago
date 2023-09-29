@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View, ImageBackground, Image} from "react-native";
 import { Link } from "expo-router";
-import { IrishGrover } from '@expo-google-fonts/irish-grover';
+
 
 
 export default function Page() {
@@ -64,7 +64,6 @@ const styles = StyleSheet.create({
 
    text_nav:{
     fontSize: 25,
-    fontFamily: 'IrishGrover',
    },
 
 

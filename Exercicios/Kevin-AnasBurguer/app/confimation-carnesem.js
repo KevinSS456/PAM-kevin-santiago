@@ -1,6 +1,5 @@
 import { StyleSheet, Text, View, ImageBackground, Image} from "react-native";
 import { Link, useLocalSearchParams } from "expo-router";
-import { IrishGrover } from '@expo-google-fonts/irish-grover';
 
 
 export default function Page() {
@@ -22,7 +21,7 @@ export default function Page() {
             <Text>SIM, CONFIRME</Text>
 
             </Link>
-            <Link href="/index"  style={styles.buttoncfm2}>
+            <Link href='/' style={styles.buttoncfm2}>
             <Text>NÃO, QUERO REINICIAR</Text>
             </Link>
           </View>
@@ -66,7 +65,7 @@ const styles = StyleSheet.create({
 
    text_nav:{
     fontSize: 25,
-    fontFamily: 'IrishGrover',
+
    },
 
 

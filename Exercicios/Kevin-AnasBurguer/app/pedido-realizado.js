@@ -1,6 +1,5 @@
 import { StyleSheet, Text, View, ImageBackground, Image} from "react-native";
 import { Link, useLocalSearchParams } from "expo-router";
-import { IrishGrover } from '@expo-google-fonts/irish-grover';
 
 
 export default function Page() {
@@ -18,7 +17,7 @@ export default function Page() {
           <Image style={styles.check} source = {require("../assets/check.png")} />
 
           <View  style={styles.dad}>
-            <Link href='/index' style={styles.texto}>
+            <Link href= '/' style={styles.texto}>
 
             <Text>ESTAMOS PREPARANDO SEU PEDIDO</Text>
 
@@ -63,8 +62,7 @@ const styles = StyleSheet.create({
    },
 
    text_nav:{
-    fontSize: 25,
-    fontFamily: 'IrishGrover',
+    fontSize: 25
    },
 
 
@@ -84,34 +82,28 @@ const styles = StyleSheet.create({
 
    img:{
     position: "absolute",
-    top: 180
+    top: 120
    },
    check:{
-    bottom: 150,
+    bottom: 90,
     position: "absolute"
    }
    ,
    title:{
      top: 0,
-     marginTop: 50,
+     marginTop: 30,
      position: "absolute",
-     fontSize: 27,
+     fontSize: 25,
      fontWeight: 'bold',
      letterSpacing: 1,
      textAlign: "center"
-   },
-   subtitle: {
-     position: "relative",
-     marginTop: 30,
-      fontWeight: 'bold',
-      fontSize: 26,
    },
    dad:{
     position: "absolute",
     width: 300,
     marginTop: 20,
     height: 70,
-    bottom: 40,
+    bottom: 20,
  
     
     
