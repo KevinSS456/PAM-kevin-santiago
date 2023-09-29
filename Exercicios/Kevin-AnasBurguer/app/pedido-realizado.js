@@ -1,5 +1,5 @@
 import { StyleSheet, Text, View, ImageBackground, Image} from "react-native";
-import { Link } from "expo-router";
+import { Link, useLocalSearchParams } from "expo-router";
 import { IrishGrover } from '@expo-google-fonts/irish-grover';
 
 
@@ -11,21 +11,17 @@ export default function Page() {
           <Text style={styles.text_nav}>Kevin & Ana's Burger</Text>
         </View>
         <View style={styles.container_escolha}>
-          <Text style={styles.title}>MONTE SEU LANCHE</Text>
+          <Text style={styles.title}>OBRIGADO POR COMPRAR CONOSCO!</Text>
 
-          <Image style={styles.img} source={require("../assets/pao.png")} />
+          <Image style={styles.img} source = {require("../assets/paperbag.png")} />
 
-          <Text style={styles.subtitle}>SEU HAMBÚRGUER SERÁ:</Text>
-          <View  style={styles.dad} >
-            <Link href={{  
-              pathname: "/optcarne",
-              params: { imagem: 'carnesemqueijo' }}}
-              style={styles.buttonFood}>
-            
-            <Image   source={require("../assets/opcaocarne.png")} />
-            </Link>
-            <Link href="/optfrango"  style={styles.buttonFood2}>
-            <Image   source={require("../assets/opcapfrango.png")} />
+          <Image style={styles.check} source = {require("../assets/check.png")} />
+
+          <View  style={styles.dad}>
+            <Link href='/index' style={styles.texto}>
+
+            <Text>ESTAMOS PREPARANDO SEU PEDIDO</Text>
+
             </Link>
           </View>
         </View>
@@ -87,16 +83,22 @@ const styles = StyleSheet.create({
    },
 
    img:{
-    marginTop: 150,
-    position: "fixed"
+    position: "absolute",
+    top: 180
    },
+   check:{
+    bottom: 150,
+    position: "absolute"
+   }
+   ,
    title:{
      top: 0,
-     marginTop: 20,
+     marginTop: 50,
      position: "absolute",
      fontSize: 27,
      fontWeight: 'bold',
      letterSpacing: 1,
+     textAlign: "center"
    },
    subtitle: {
      position: "relative",
@@ -105,24 +107,20 @@ const styles = StyleSheet.create({
       fontSize: 26,
    },
    dad:{
-    justifyContent: "space-between",
-    width: 320,
-    height: 100,
-    marginLeft: 25,
-    top: 0,
-    padding: 0
-   },
-   buttonFood:{
-     top: 0,
-     height: 300,
-     width:150
-   },
-   buttonFood2:{
-     top: 0,
     position: "absolute",
-    height: 300,
-    width:150,
-    top: 0,
-    right: 0
-  }
+    width: 300,
+    marginTop: 20,
+    height: 70,
+    bottom: 40,
+ 
+    
+    
+   },
+   texto:{
+    textAlign: "center",
+    textAlignVertical: "center",
+    fontWeight: "bold",
+    fontSize: 20
+   
+   }
 });

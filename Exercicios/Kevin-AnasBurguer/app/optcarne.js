@@ -1,5 +1,5 @@
 import { StyleSheet, Text, View, ImageBackground, Image} from "react-native";
-import { Link } from "expo-router";
+import { Link, useLocalSearchParams } from "expo-router";
 import { IrishGrover } from '@expo-google-fonts/irish-grover';
 
 
@@ -13,19 +13,16 @@ export default function Page() {
         <View style={styles.container_escolha}>
           <Text style={styles.title}>MONTE SEU LANCHE</Text>
 
-          <Image style={styles.img} source={require("../assets/pao.png")} />
+          <Image style={styles.img} source = {require("../assets/carnesemqueijo.png")} />
 
           <Text style={styles.subtitle}>SEU HAMBÚRGUER SERÁ:</Text>
-          <View  style={styles.dad} >
-            <Link href={{  
-              pathname: "/optcarne",
-              params: { imagem: 'carnesemqueijo' }}}
-              style={styles.buttonFood}>
-            
-            <Image   source={require("../assets/opcaocarne.png")} />
+          <View  style={styles.dad}>
+            <Link href='/confimation-carne' style={styles.buttonFood}>
+
+            <Image   source={require("../assets/opcaoqueijo.png")} />
             </Link>
-            <Link href="/optfrango"  style={styles.buttonFood2}>
-            <Image   source={require("../assets/opcapfrango.png")} />
+            <Link href='/confimation-carnesem'  style={styles.buttonFood2}>
+            <Image   source={require("../assets/opcaosemqueijo.png")} />
             </Link>
           </View>
         </View>

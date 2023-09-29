@@ -13,19 +13,15 @@ export default function Page() {
         <View style={styles.container_escolha}>
           <Text style={styles.title}>MONTE SEU LANCHE</Text>
 
-          <Image style={styles.img} source={require("../assets/pao.png")} />
+          <Image style={styles.img} source={require("../assets/frangosemqueijo.png")} />
 
           <Text style={styles.subtitle}>SEU HAMBÚRGUER SERÁ:</Text>
-          <View  style={styles.dad} >
-            <Link href={{  
-              pathname: "/optcarne",
-              params: { imagem: 'carnesemqueijo' }}}
-              style={styles.buttonFood}>
-            
-            <Image   source={require("../assets/opcaocarne.png")} />
+          <View  style={styles.dad}>
+            <Link href='/confimation-frango' style={styles.buttonFood}>
+            <Image   source={require("../assets/opcaoqueijo.png")} />
             </Link>
-            <Link href="/optfrango"  style={styles.buttonFood2}>
-            <Image   source={require("../assets/opcapfrango.png")} />
+            <Link href="/confimation-frangosem"  style={styles.buttonFood2}>
+            <Image   source={require("../assets/opcaosemqueijo.png")} />
             </Link>
           </View>
         </View>

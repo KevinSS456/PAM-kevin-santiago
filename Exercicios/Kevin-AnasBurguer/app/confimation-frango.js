@@ -1,5 +1,5 @@
 import { StyleSheet, Text, View, ImageBackground, Image} from "react-native";
-import { Link } from "expo-router";
+import { Link, useLocalSearchParams } from "expo-router";
 import { IrishGrover } from '@expo-google-fonts/irish-grover';
 
 
@@ -13,19 +13,17 @@ export default function Page() {
         <View style={styles.container_escolha}>
           <Text style={styles.title}>MONTE SEU LANCHE</Text>
 
-          <Image style={styles.img} source={require("../assets/pao.png")} />
+          <Image style={styles.img} source = {require("../assets/frangocomqueijo.png")} />
 
-          <Text style={styles.subtitle}>SEU HAMBÚRGUER SERÁ:</Text>
-          <View  style={styles.dad} >
-            <Link href={{  
-              pathname: "/optcarne",
-              params: { imagem: 'carnesemqueijo' }}}
-              style={styles.buttonFood}>
-            
-            <Image   source={require("../assets/opcaocarne.png")} />
+          <Text style={styles.subtitle}>CONFIRMAR PEDIDO?</Text>
+          <View  style={styles.dad}>
+            <Link href='/pedido-realizado' style={styles.buttoncfm}>
+
+            <Text>SIM, CONFIRME</Text>
+
             </Link>
-            <Link href="/optfrango"  style={styles.buttonFood2}>
-            <Image   source={require("../assets/opcapfrango.png")} />
+            <Link href="/index"  style={styles.buttoncfm2}>
+            <Text>NÃO, QUERO REINICIAR</Text>
             </Link>
           </View>
         </View>
@@ -105,24 +103,34 @@ const styles = StyleSheet.create({
       fontSize: 26,
    },
    dad:{
-    justifyContent: "space-between",
-    width: 320,
-    height: 100,
-    marginLeft: 25,
+    width: 250,
+    marginTop: 20,
+    height: 150,
     top: 0,
-    padding: 0
+    paddingTop: 20,
+    
    },
-   buttonFood:{
-     top: 0,
-     height: 300,
-     width:150
+   buttoncfm:{
+     height: 50,
+     width:250,
+     textAlign: "center",
+     textAlignVertical: "center",
+     backgroundColor: "#297427",
+     borderRadius: 5,
+     padding: 6,
+     fontSize: 20
    },
-   buttonFood2:{
-     top: 0,
+   buttoncfm2:{
     position: "absolute",
-    height: 300,
-    width:150,
-    top: 0,
-    right: 0
+    padding: 6,
+    height: 50,
+    width:250,
+    backgroundColor: "#A42E2E",
+    right: 0,
+    textAlignVertical: "center",
+    fontSize: 20,
+    textAlign: "center",
+    borderRadius: 5,
+    bottom: 0
   }
 });
